@@ -41,11 +41,12 @@ let file1 = null;
 let connected = false;
 let ios_app_url = "";
 let android_app_url = "";
-
 disconnectButton.style.display = "none";
 eraseButton.style.display = "none";
 var config = [];
 var isDefault = true;
+
+
 
 // Build the Quick Try UI using the config toml file. If external path is not specified, pick up the default config
 async function buildQuickTryUI() {
@@ -571,7 +572,7 @@ flashButton.onclick = async () => {
     esploader.status = "started";
 }
 
-/*
+
 connectPreview.onclick = async () => {
     await connectToDevice();
     if (connected) {
@@ -594,7 +595,7 @@ flashCustom.onclick = async () => {
             alert('Chipset type not recognizable!');
     }
     postConnectControls();
-}*/
+}
 
 function getTerminalColumns() {
     const mainContainerWidth = mainContainer?.offsetWidth || 1320;
